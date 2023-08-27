@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import Profile from '@components/profile';
+import Profile from '@components/Profile';
 
 
 const MyProfile = () => { 
@@ -12,7 +12,6 @@ const MyProfile = () => {
   const router = useRouter();
 
   const [posts, setPosts] = useState([]);
-  console.log("🚀 ~ file: page.jsx:14 ~ MyProfile ~ posts:", posts)
 
   useEffect(() => {
     const fetchPosts = async () => {

@@ -10,7 +10,6 @@ const EditPrompt = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const promptId = searchParams.get('id');
-    console.log("🚀 ~ file: page.jsx:16 ~ EditPrompt ~ promptId:", promptId)
 
     const [submitting, setSubmitting] = useState(false);
     const [post, setPost] = useState({ 
@@ -22,7 +21,6 @@ const EditPrompt = () => {
          const getPromptDetails = async () => {
             const response = await fetch(`/api/prompt/${promptId}`)
             const data = await response.json();
-            console.log("🚀 ~ file: page.jsx:24 ~ getPromptDetails ~ data:", data)
 
             setPost({
                 prompt: data.prompt,

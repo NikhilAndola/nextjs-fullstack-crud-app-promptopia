@@ -11,7 +11,6 @@ const PromptCard = ({post, handleTagClick, handleEdit, handleDelete}) => {
 
   const {data: session} = useSession();
   const pathName = usePathname();
-  console.log("🚀 ~ file: PromptCard.jsx:14 ~ PromptCard ~ pathName:", pathName)
 
   const [copied, setCopied] = useState("");
 
